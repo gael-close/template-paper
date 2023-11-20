@@ -96,4 +96,4 @@ The template here was derived from the setup used by the following 2 papers (als
 
 * B. Brajon, E. Gasparin, and G. Close, “A benchmark of integrated magnetometers and magnetic gradiometers,” IEEE Access, vol. 11, pp. 115635–115643, 2023, <https://doi.org/10.1109/ACCESS.2023.3325035>.
 
-
+The poster stylesheet is taken from https://github.com/hits-mbm-dev/paper-talin-loop/.
