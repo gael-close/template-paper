@@ -1,0 +1,26 @@
+\usepackage{lipsum}
+\usepackage{orcidlink}
+\usepackage{textalpha}
+\usepackage{sourceserifpro}
+\usepackage[scale=0.80]{sourcecodepro}
+%\usepackage{sourcesanspro}
+%\renewcommand*\familydefault{\sfdefault}
+
+
+% highlight
+\def\highlight{1}
+\ifdefined\highlight
+    \newcommand\hl[1]{%
+        \bgroup
+        \hskip0pt\color{red!80!black}%
+        #1%
+        \egroup
+    }
+
+% Muted text (for filler text)
+\newcommand\muted[1]{%
+\bgroup
+\hskip0pt\color{black!40!}%
+#1%
+\egroup
+}

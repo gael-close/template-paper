@@ -1,0 +1,84 @@
+% Common packages
+\usepackage[T1]{fontenc}
+\usepackage{lipsum}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{physics}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage[hyphens]{url}
+\usepackage{threeparttable}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{makecell}
+\usepackage{upgreek}
+\usepackage{orcidlink}
+\usepackage{textalpha}          %enable alpha beta unicode in text
+\usepackage[switch]{lineno}
+% monofont
+\usepackage[scaled=0.8]{inconsolata}
+
+%styled tabled generated from pandas
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{stfloats} % https://tex.stackexchange.com/a/324358
+
+% Fix table in 2-column format and enable wide table
+% https://tex.stackexchange.com/a/224096
+\makeatletter
+% My tables (dense)
+\setlength{\tabcolsep}{2pt}
+\newenvironment{mytable}[1][htbp]{
+    \begin{figure}[#1]
+    \small
+    \onecolumn
+    \begin{minipage}{0.5\textwidth}}
+{
+    \end{minipage}
+    \twocolumn
+    \end{figure}}
+
+\newenvironment{mywidetable}[1][tbp]{
+    \begin{figure*}[#1]
+    \small
+    \onecolumn
+    \begin{minipage}{1.0\textwidth}}
+{
+    \end{minipage}
+    \twocolumn
+    \end{figure*}}
+
+\renewenvironment{table*}{\begin{mywidetable}}{\end{mywidetable}\ignorespacesafterend}
+\renewenvironment{table}{\begin{mytable}}{\end{mytable}\ignorespacesafterend}    
+\makeatother
+
+% highlight
+\def\highlight{1}
+\ifdefined\highlight
+    \newcommand\hl[1]{%
+        \bgroup
+        \hskip0pt\color{red!80!black}%
+        #1%
+        \egroup
+    }
+
+% Muted text (for filler text)
+\newcommand\muted[1]{%
+\bgroup
+\hskip0pt\color{black!40!}%
+#1%
+\egroup
+}
+
+% color links
+\usepackage{hyperref}
+\hypersetup{ colorlinks, citecolor=teal, linkcolor=teal, urlcolor=teal}
+
+\hypersetup{%
+  colorlinks=true,%
+  linkcolor=teal,
+  citecolor=teal,
+  urlcolor=teal,
+  bookmarksnumbered=true,%
+  bookmarksopen=true}

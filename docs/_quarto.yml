@@ -1,0 +1,39 @@
+project:
+  type: default
+  output-dir: _build
+
+author:
+  - name: John Smith
+    affiliation: 
+      - ref: 1
+  - name: Gaël Close
+    email: gcl@melexis.com
+    orcid: 0000-0002-5140-7789
+    affiliation:
+      - ref: 1
+    corresponding: true
+date: last-modified
+date-format: '[Revised] DD-MMM-YYYY HH:MM'
+affiliations:
+  - id: 1
+    name: Melexis Technologies SA
+    city: Bevaix
+    country: Switzerland
+bibliography: biblio.bib
+title-block-style: default
+tbl-colwidths: false
+echo: false
+editor:
+  render-on-save: false
+format:
+  mydefault-html: default
+  ieee-pdf: default
+format-links: [ieee-pdf]  
+resource-path: ["_extensions/ieee", "_extensions/mydefault"]
+
+pdf-engine: pdflatex
+execute:
+  cache: true 
+  echo: true
+  #freeze: true
+  #enabled: true # must be in to evaluate inline calculation

@@ -1,0 +1,81 @@
+\let\TeXyear\year
+\documentclass{ieeeaccess}
+\let\setyear\year
+\let\year\TeXyear
+
+% Patch packages
+\RequirePackage{scrlfile}
+\PreventPackageFromLoading{sidenotes}
+\PreventPackageFromLoading{marginnotes}
+\PreventPackageFromLoading{tcolorbox}
+
+% Pandoc settings
+\input{pandoc.tex}  
+
+% GCL settings
+\input{ieee-preamble.tex}  
+
+% ==========================================================================
+% IEEE Access front matter
+% ==========================================================================
+% Fix for heading 
+% https://shantoroy.com/latex/tikz-package-compatibility-in-ieee-access-latex-template/
+\NewSpotColorSpace{PANTONE}
+\AddSpotColor{PANTONE} {PANTONE3015C} {PANTONE\SpotSpace 3015\SpotSpace C} {1 0.3 0 0.2}
+\SetPageColorSpace{PANTONE}
+
+% from template
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\begin{document}
+\history{Draft for IEEE Access | v1.2.3-alpha | Revised 26-Aug-2023 11:00}
+\doi{10.1109/ACCESS.2017.DOI}
+\renewcommand{\thevol}{0}
+\renewcommand{\theyear}{2023}
+
+% ==========================================================================
+% Title, authors, abstract, keywords
+% ==========================================================================
+\title{Minimum Working Example}
+\author{
+	\uppercase{First Author}\authorrefmark{1}\orcidlink{0000-0000-0000-0000},
+	\uppercase{Second Author}\authorrefmark{2}\orcidlink{0000-0000-0000-0000}, and 
+	\uppercase{Third C. Author}\authorrefmark{3,*}\orcidlink{0000-0000-0000-0000}}
+
+	
+\address[1]{Affiliation name, City, Country}
+\address[2]{Affiliation name, City, Country}
+\address[3]{Affiliation name, City, Country}
+
+\tfootnote{This research received no external funding.}
+
+% \markboth
+% {Author \headeretal: Preparation of Papers for IEEE ACCESS}
+% {Author \headeretal: Preparation of Papers for IEEE ACCESS}
+
+\corresp{\authorrefmark{*}Corresponding author abc@gmail.com}
+
+
+\begin{abstract}
+\lipsum[1]
+\end{abstract}
+
+\begin{keywords}
+Latex, Template, Paper
+\end{keywords}
+
+\titlepgskip=-15pt
+
+\maketitle
+
+% ==========================================================================
+% Body
+% ==========================================================================
+\input{sample-body.tex}
+
+% ==========================================================================
+% Back matter
+% ==========================================================================
+\EOD
+\end{document}

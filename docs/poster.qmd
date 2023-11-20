@@ -1,0 +1,121 @@
+---
+title: |
+  Paper title
+custom-authors:
+  - name: Author 1
+    affiliation: 1
+  - name: Author 2
+    affiliation: 1
+affiliation:
+  - Company Name 
+date: "2022-02-20"
+link-citations: true
+validate-yaml: false
+format:
+  html:
+    csl: ieee-with-url.csl
+    cite-method: citeproc
+    template: _extensions/betterposter/poster-template.html
+    page-layout: custom
+    theme: none
+    css:
+      - _extensions/betterposter/betterposter.css
+      - poster.css
+    # accent_color: "#1e4287"
+    hero_background: "#00354C"
+    #linkcolor: "#1e4287"
+    #favicon: www/hits-logo.png
+    qrcode:
+      text: "https://melexis.com"
+      size: "250"
+    mathjax: false
+    self-contained: true
+bibliography: biblio.bib
+  
+
+---
+
+::::{#hero}
+
+:::{#qrcode}
+:::
+
+![](https://dummyimage.com/200x200.png&text=Logo){.logo #logo-corner}
+
+# Key message
+
+Elaborate key message from paper.
+
+![](https://dummyimage.com/1000x800.png&text=Graphical-Abstract)
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque semper auctor porttitor. Vivamus eros ante, ultrices eget viverra quis, semper vitae eros. Aliquam erat volutpat. Proin vel orci varius erat suscipit ultricies. Curabitur tempor sapien neque, eget luctus lacus mattis non. 
+
+:::{.call-to-action}
+Follow the QR code or visit <https://melexis.com>
+for the repository of the paper draft. 
+:::
+
+::::
+
+::::{#left-bar}
+## Abstract
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eget varius enim, ac aliquet ante. Donec dolor neque, accumsan tristique rhoncus a, mollis eu sem. Mauris felis orci, lobortis a erat ac, tristique fringilla nibh. Etiam in maximus neque, quis laoreet sapien. Proin pretium eros a felis cursus varius. In mollis, quam quis ornare dictum, metus ligula bibendum lectus, nec egestas risus felis sollicitudin mi. Pellentesque bibendum lacinia sem, ac convallis est sodales sed. Integer eget cursus felis. Nullam eget orci volutpat, malesuada urna ut, varius nunc. Nulla facilisi. Vivamus tincidunt neque velit, ac ornare odio consequat eu. Integer aliquam imperdiet nibh ut condimentum. Sed tempor et mauris ac egestas. Cras hendrerit, mauris cursus tincidunt volutpat, lacus neque efficitur ex, vitae lobortis nulla tellus quis dui. Aliquam rhoncus ante ac sagittis aliquam.
+
+## Introduction
+
+Morbi quam magna, ornare eu lectus a, vulputate condimentum sapien. Nam scelerisque at lectus ac venenatis. Pellentesque nunc neque, elementum quis est vel, faucibus convallis libero. Donec fringilla lacus id semper porta. Pellentesque varius nulla in erat luctus, quis iaculis lorem porttitor. Vestibulum sodales velit et libero gravida rutrum. Curabitur eget interdum magna, scelerisque iaculis ante. Nulla sit amet porta eros. Vestibulum sit amet mattis risus. Aenean vehicula in nibh eu finibus. Duis sit amet tellus vitae enim consequat condimentum. Suspendisse aliquet ullamcorper nunc sit amet pretium. Quisque non odio ipsum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras nisi nibh, mattis id lectus vel, tincidunt gravida erat.
+
+## Methods
+
+* Method 1
+* Method 2
+* Method 3
+
+![Caption.](https://dummyimage.com/1000x800.png&text=Fig-1){#fig-1}
+
+Sed sit amet mauris a lorem varius dignissim. Nullam velit ex, condimentum ut suscipit nec, varius et ligula. Maecenas et tempus ante. Cras rhoncus commodo orci, eu mollis ex vestibulum ut. Quisque mi justo, interdum nec nisi id, elementum commodo neque. Nunc a euismod nisi. Mauris eleifend faucibus interdum. Proin varius quam risus, nec ultrices lorem pharetra finibus. Ut faucibus nibh et feugiat vestibulum.
+
+Vivamus eget dapibus justo. Donec ac nisi dui. Quisque vulputate congue magna ac dictum. Duis ut efficitur est, non ornare erat. Phasellus vitae massa leo. Nulla fringilla lacus ornare lacus volutpat ultricies. Aliquam tempus at elit nec lacinia.
+::::
+
+::::{#right-bar}
+
+
+
+## Results
+
+:::{#fig-2 layout-ncol=2}
+
+![](https://dummyimage.com/1000x500.png&text=Fig-2a){width=50%}
+
+![](https://dummyimage.com/1000x500.png&text=Fig-2b){width=50%}
+
+**Left**: Caption. **Right**: Caption.
+:::
+
+
+Morbi quam magna, ornare eu lectus a, vulputate condimentum sapien. Nam scelerisque at lectus ac venenatis. Pellentesque nunc neque, elementum quis est vel, faucibus convallis libero. Donec fringilla lacus id semper porta. Pellentesque varius nulla in erat luctus, quis iaculis lorem porttitor. Vestibulum sodales velit et libero gravida rutrum. Curabitur eget interdum magna, scelerisque iaculis ante. Nulla sit amet porta eros. Vestibulum sit amet mattis risus. Aenean vehicula in nibh eu finibus. Duis sit amet tellus vitae enim consequat condimentum. Suspendisse aliquet ullamcorper nunc sit amet pretium. Quisque non odio ipsum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Cras nisi nibh, mattis id lectus vel, tincidunt gravida erat.
+
+## Discussion
+
+![Caption](https://dummyimage.com/1000x800.png&text=Fig-3){#fig-3}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque semper auctor porttitor. Vivamus eros ante, ultrices eget viverra quis, semper vitae eros. Aliquam erat volutpat. Proin vel orci varius erat suscipit ultricies. Curabitur tempor sapien neque, eget luctus lacus mattis non. Phasellus porttitor sagittis tempor. Morbi tristique tortor nec urna finibus, ac eleifend ligula consectetur. Fusce scelerisque placerat lectus, ac euismod lorem tempor at. Aenean odio nibh, viverra in est vitae, scelerisque fermentum eros. Nullam tristique quam et euismod molestie. Nunc tincidunt imperdiet consectetur. Nullam accumsan lorem eget enim auctor, egestas sodales lectus luctus. Nulla scelerisque non turpis eu commodo.
+
+@Brajon2023-et presents a comprehensive benchmark paper written in Quarto.
+@close2022 is a tutorial paper on technical writing with Quarto.
+
+
+
+
+
+## References
+
+:::{#refs}
+:::
+
+::::
+
+
+

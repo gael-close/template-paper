@@ -1,0 +1,42 @@
+title: My default
+author: Gael Close
+version: 0.1.0
+contributes:
+  formats:
+    pdf:
+      documentclass: scrartcl
+      classoption: "headings=big"
+      fontsize: 12pt
+      toc: false
+      toc-depth: 2
+      shift-heading-level-by: -1
+      keep-tex: false
+      number-sections: true
+      number-depth: 1
+      template-partials:
+        - title.tex
+      include-before-body:
+        - text: |
+            \hypersetup{colorlinks, citecolor=teal, linkcolor=teal, urlcolor=teal}
+      include-in-header: preamble.tex
+      fig-format: png
+      csl: ieee-with-url.csl
+      cite-method: citeproc
+      link-citations: true
+      pdf-engine: xelatex
+        
+    html:
+      # define default configuration for the html version of your format
+      theme:
+        - yeti
+        - custom.scss
+      toc: true
+      toc-location: right
+      title-block-banner: false
+      code-fold: true
+      csl: ieee-with-url.csl
+      cite-method: citeproc
+      link-citations: true
+      number-sections: false
+      shift-heading-level-by: -1
+      self-contained: true

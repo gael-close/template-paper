@@ -1,0 +1,149 @@
+---
+version: 1.0.0+a4e9
+title: Paper Title
+abstract: |
+  Key points of intro (context and gap). Key method. Key results. Key impact.
+keywords: Magnetic sensors, Hall effect
+---
+
+```{python}
+#| output: false
+#| echo: false
+import sys 
+from pyprojroot import here
+sys.path.insert(0, str(here()))
+sys.path.insert(0,'..')
+from src.myinit import *
+# Autoreload
+%reload_ext autoreload
+%autoreload 2
+
+from src.mymodule import load_data, plot_joint
+```
+
+```{python}
+#| echo: false
+#| output: false
+df=load_data()
+```
+
+:::{.callout-note}
+### Examples
+
+Here are two of my recent papers formatted with Quarto:
+
+* @close2022 is a tutorial paper on technical writing with Quarto.
+* @Brajon2023-et is a full technical paper, whose source is available on [Gitlab](https://gitlab.melexis.com/se-bvx/papers/benchmark-gradiometer).
+
+Note that there is now an [official extension](https://github.com/dfolio/quarto-ieee/) to format the output according to IEEE template
+:::
+
+
+## Introduction {#sec-introduction}
+
+### 🗺️ Context
+
+- 🌍 Big-picture challenge in the world ("hook the audience").
+- 📍 Zoom into a specific topic.
+- 📚 🧑‍🔬 Prior knowledge & work, scientific SoA
+- ❓ Open research question & gap
+  - there is a **need** to address this gap
+
+### 🎯 Objectives
+
+Or "Sensor requirements"
+
+- 🚫 High-level restrictions (IN vs OUT of scope)
+- 📏 Specific measurable metrics
+
+### 🔍 Preview
+- 💡 Preview the novel idea (concept, approach, ...)
+	TIP: include a concept overview figure on page 1. See @fig-concept.
+- ✨ Highlight unique contributions.
+- Preview paper structure: Section 1 describes ...
+
+
+![Key concept.](https://source.unsplash.com/photo-of-bulb-artwork-82TpEld0_e4){#fig-concept}
+
+## (Related Works)
+
+In long paper, dedicated section to review the state of the art.
+
+
+## ⚙️ Methods
+
+Or "Design" if more appropriate.
+Use action verb to emphasize the procedure (the "recipe").
+
+![Block diagram.](https://source.unsplash.com/person-writing-on-white-paper-3QzMBrvCeyQ){#fig-bd width=400 fig-align=left}
+
+@fig-bd shows the architecture block diagram.
+
+### Design of element 1
+
+### Design of element 2
+
+## 🚀 Implementation 
+Pictures of realizations and/or experimental setups.
+
+![Picture of the prototype.](https://source.unsplash.com/blue-circuit-board-jXd2FSvcRr8)
+
+
+
+## 📊 (Experimental) results
+- Test 1
+- Test 2
+
+
+```{python}
+#| echo: false
+#| label: fig-result1
+#| fig-align: left
+#| fig-cap: "Result of \
+#|  test 1."
+plot_joint(df);
+```
+
+## 💬 Discussion
+- Key insights
+- Comparison with previous work
+- Highlight the strengths by explaining
+    - how the paper moves the SoA
+    - how the paper addresses the original objectives
+- Discuss limitations and recommendation for future work
+
+## 🏁 Conclusion
+- Summary: methods & results & significance
+- Extrapolate / speculate on the broad impact
+
+\appendices
+
+## 📖 Refresher on XXX {.appendix}
+It might be needed to provide a refresher
+on some well-known background knowledge.
+Review of Theory X, Fundamentals of X, ...
+ 
+## Nomenclature / notation {.appendix}
+List of symbols. Sometimes included just after the intro.
+
+## References
+
+::: {#refs}
+:::
+
+
+::: {.content-visible when-format="html"}
+<!-- footnote in PDF -->
+
+Version: v{{< meta version >}}
+
+::: {.callout-note collapse="true"}
+
+## Watermark
+
+```{python}
+%load_ext watermark
+%watermark -n -t -u -v -g -iv
+```
+:::
+:::

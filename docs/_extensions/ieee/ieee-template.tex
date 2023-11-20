@@ -1,0 +1,126 @@
+$if(ieeetran)$
+\documentclass[letterpaper, 10 pt, conference, twoside]{IEEEtran}
+\IEEEoverridecommandlockouts
+\IEEEpubid{\begin{minipage}{\textwidth}\ \\[12pt]
+    v$version$ | $date$
+\end{minipage}}
+$endif$
+
+$if(ieeeaccess)$
+\let\TeXyear\year
+\documentclass{ieeeaccess}
+\let\setyear\year
+\let\year\TeXyear
+$endif$
+
+
+% Patch packages
+\RequirePackage{scrlfile}
+\PreventPackageFromLoading{sidenotes}
+\PreventPackageFromLoading{marginnotes}
+%% \PreventPackageFromLoading{tcolorbox}
+
+
+% Pandoc settings
+$pandoc.tex()$
+
+% GCL settings
+\input{ieee-preamble.tex} 
+$if(ieeeaccess)$
+% Fix for heading in IEEE Access
+% https://shantoroy.com/latex/tikz-package-compatibility-in-ieee-access-latex-template/
+\NewSpotColorSpace{PANTONE}
+\AddSpotColor{PANTONE} {PANTONE3015C} {PANTONE\SpotSpace 3015\SpotSpace C} {1 0.3 0 0.2}
+\SetPageColorSpace{PANTONE}
+\definecolor{accessblue}{RGB}{11,111,174}
+$endif$
+% ==========================================================================
+% Front matter
+% ==========================================================================
+% from template
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\begin{document}
+
+% ==========================================================================
+% IEEE tran: Title, authors, abstract, keywords
+% ==========================================================================
+$if(ieeetran)$
+\title{$title$}
+\author{\IEEEauthorblockN{
+        $for(by-author)$
+        $by-author.name.literal$$for(by-author.affiliations)$\(^{$it.number$}\)$sep$,$endfor$$if(by-author.orcid)$\orcidlink{$by-author.orcid$}
+        $endif$$sep$, $endfor$}
+
+    $for(affiliations)$\IEEEauthorblockA{\(^$it.number$\)$affiliations.name$}$sep$ $endfor$
+
+    % Assumption: exactly 1 corresponding author
+    \IEEEauthorblockN{Email:
+        $for(by-author)$
+        $if(by-author.attributes.corresponding)$\(^*\)\emph{$by-author.email$}$endif$$endfor$}
+
+    $if(footnote)$\thanks{$footnote$}$endif$
+    \thanks{This work has been submitted to the IEEE for possible publication. Copyright may be transferred without notice, after which this version may no longer be accessible.}
+}
+\maketitle
+\begin{abstract}
+    $abstract$
+\end{abstract}
+\begin{IEEEkeywords}
+    $keywords$
+\end{IEEEkeywords}
+$endif$
+
+
+
+% ==========================================================================
+% IEEE Access: Title, authors, abstract, keywords
+% ==========================================================================
+$if(ieeeaccess)$
+\history{DRAFT | $version$ | $date$}
+%% \doi{10.1109/ACCESS.2017.DOI}
+\doi{}
+\renewcommand{\thevol}{0}
+\renewcommand{\theyear}{2023}
+\title{$title$}
+\author{
+    $for(by-author)$
+    \uppercase{$by-author.name.literal$}\(^{$by-author.note.text$}\)$if(by-author.orcid)$\orcidlink{$by-author.orcid$}$endif$$sep$, $endfor$
+
+    $for(affiliations)$\address[$it.number$]{$affiliations.name$, $affiliations.city$, $affiliations.country$}$sep$ $endfor$
+}
+
+\corresp{Corresponding author: $for(by-author)$
+    $if(by-author.attributes.corresponding)$\(^*\)\emph{$by-author.email$}$endif$$endfor$.}
+
+\tfootnote{$footnote$
+    This work has been submitted to the IEEE for possible publication. Copyright may be transferred without notice, after which this version may no longer be accessible.}
+
+\markboth{}{}
+
+\begin{keywords}
+    $keywords$
+\end{keywords}
+\titlepgskip=-15pt
+\begin{abstract}
+    $abstract$
+\end{abstract}
+\maketitle
+$endif$
+
+% ==========================================================================
+% Body
+% ==========================================================================
+$body$
+
+% ==========================================================================
+% Back matter
+% ==========================================================================
+$if(ieeebio)$
+\input{bio.tex}
+$endif$
+$if(ieeeaccess)$
+\EOD
+$endif$
+\end{document}

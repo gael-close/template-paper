@@ -1,0 +1,16 @@
+\title{$title$}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+$if(subtitle)$
+\subtitle{$subtitle$}
+$endif$
+
+\author{$for(by-author)$ $by-author.name.literal$\(^{$by-author.note.text$}\)$if(by-author.orcid)$\orcidlink{$by-author.orcid$}$endif$$sep$, $endfor$\\
+\normalsize $for(affiliations)$\(^$it.number$\)$affiliations.name$$sep$ $endfor$
+}
+
+\date{\footnotesize $version$ | $date$}
