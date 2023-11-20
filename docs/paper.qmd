@@ -41,25 +41,25 @@ Note that there is now an [official extension](https://github.com/dfolio/quarto-
 
 ## Introduction {#sec-introduction}
 
-### 🗺️ Context
+###  Context
 
-- 🌍 Big-picture challenge in the world ("hook the audience").
-- 📍 Zoom into a specific topic.
-- 📚 🧑‍🔬 Prior knowledge & work, scientific SoA
-- ❓ Open research question & gap
+-  Big-picture challenge in the world ("hook the audience").
+-  Zoom into a specific topic.
+-   Prior knowledge & work, scientific SoA
+-  Open research question & gap
   - there is a **need** to address this gap
 
-### 🎯 Objectives
+###  Objectives
 
 Or "Sensor requirements"
 
-- 🚫 High-level restrictions (IN vs OUT of scope)
-- 📏 Specific measurable metrics
+-  High-level restrictions (IN vs OUT of scope)
+-  Specific measurable metrics
 
-### 🔍 Preview
-- 💡 Preview the novel idea (concept, approach, ...)
+###  Preview
+-  Preview the novel idea (concept, approach, ...)
 	TIP: include a concept overview figure on page 1. See @fig-concept.
-- ✨ Highlight unique contributions.
+-  Highlight unique contributions.
 - Preview paper structure: Section 1 describes ...
 
 
@@ -70,7 +70,7 @@ Or "Sensor requirements"
 In long paper, dedicated section to review the state of the art.
 
 
-## ⚙️ Methods
+##  Methods
 
 Or "Design" if more appropriate.
 Use action verb to emphasize the procedure (the "recipe").
@@ -83,14 +83,14 @@ Use action verb to emphasize the procedure (the "recipe").
 
 ### Design of element 2
 
-## 🚀 Implementation 
+##  Implementation 
 Pictures of realizations and/or experimental setups.
 
 ![Picture of the prototype.](https://source.unsplash.com/blue-circuit-board-jXd2FSvcRr8)
 
 
 
-## 📊 (Experimental) results
+##  (Experimental) results
 - Test 1
 - Test 2
 
@@ -104,7 +104,7 @@ Pictures of realizations and/or experimental setups.
 plot_joint(df);
 ```
 
-## 💬 Discussion
+##  Discussion
 - Key insights
 - Comparison with previous work
 - Highlight the strengths by explaining
@@ -112,13 +112,13 @@ plot_joint(df);
     - how the paper addresses the original objectives
 - Discuss limitations and recommendation for future work
 
-## 🏁 Conclusion
+##  Conclusion
 - Summary: methods & results & significance
 - Extrapolate / speculate on the broad impact
 
 \appendices
 
-## 📖 Refresher on XXX {.appendix}
+##  Refresher on XXX {.appendix}
 It might be needed to provide a refresher
 on some well-known background knowledge.
 Review of Theory X, Fundamentals of X, ...

@@ -55,17 +55,18 @@ Install the pre-requisites
 
 * [Quarto](https://quarto.org/docs/download/)
 * [a Latex installation](https://quarto.org/docs/output-formats/pdf-engine.html)
-* The poster PDF rendering relies on google-chrome
+* google-chrome. The poster PDF rendering relies on printing to PDF via google-chrome.
 * [Poetry](https://python-poetry.org/docs/#installation)
 
-Install the Python dependencies in a Virtual env (one-time only)
+Install the Python dependencies in a Virtual environment (one-time only)
 
 ```
 poetry install --no-root
 ```
+
 ### Activation (to be done in each session)
 
-Load the venv 
+Load the virtual environment.
 
 ```
 poetry shell;
@@ -74,10 +75,10 @@ export QUARTO_PYTHON=`poetry env info --executable`
 
 Double check the configuration with `quarto check`
 
-Alternative with https://direnv.net/: activate autmoatically when entering the working directory with the provided file `.envrc`
+Alternative with https://direnv.net/: activate autmoatically when entering the working directory. 
+Use the provided file `.envrc`
 
 ### Operation
-
 
 To build the paper HTML and the poster:
 
@@ -85,8 +86,6 @@ To build the paper HTML and the poster:
 run html
 run poster
 ```
-
-
 
 ## References
 
