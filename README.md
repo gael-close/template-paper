@@ -1,9 +1,18 @@
-# Paper Short Title
+# A Template for A Reproducible Computational Paper
 
-This repository contains all materials for a template paper entitled XXX.
+This repository contains the boilerplate elements for a computational paper, authored from Python notebooks
+Such paper consists of
+
+* code and data
+* manuscript in the form of a computational Python notebook mixing code, computation results and narrative with a simple Markdown syntax
+* possibly other support notebooks as supplementary materials
+* a companion A0 poster
+* Runfile to build the paper from scratch with simple commands (e.g. `run pdf` to build the journal-fromatted PDF)
+* Configuration options 
+
+![](assets/template-paper-overview.png)
 
 
-<img src="https://dummyimage.com/300x200.png&text=Graphical-Abstract" width=400>
     
 ## Published paper
 
@@ -35,9 +44,6 @@ on [this Gitlab page](https://se-bvx.pages.melexis.com/papers/template-paper/ind
 * [tbump](https://github.com/your-tools/tbump) configuration for managing version tag.
 * Plain 1-column PDF format also available for supplementary notes
 
-### Features overview
-
-![](assets/template-paper-overview.png)
 
 ## References
 
