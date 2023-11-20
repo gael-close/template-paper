@@ -17,6 +17,5 @@
 # Video
 *.mp4 filter=lfs diff=lfs merge=lfs -text
 *.pd filter=lfs diff=lfs merge=lfs -text
-
 # Deliverables
 deliverables/*  -filter=lfs -diff=lfs -merge=lfs -text

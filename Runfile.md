@@ -3,7 +3,6 @@
 This [Runfile](https://github.com/awkspace/runfile) builds the paper.
 
 Examples:
-    run install # first-time installation of Python package
     run html    
 
 **Typical workflow**
@@ -26,21 +25,6 @@ Examples:
     run inspect
     #git reset --hard HEAD~1          # in case of issue and delete tag
     run pub                           # publish and push
-
-## install
-
-Install all dependencies in a virtual env.
-
-```bash
-curl -sSL https://install.python-poetry.org | python3 -
-poetry install
-```
-
-Alternatively:
-
-  python -m venv venv 
-  venv/bin/pip install -r requirements.txt
-  source venv/bin/activite
 
 ## unit_tests
 
