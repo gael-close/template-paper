@@ -1,4 +1,4 @@
-# A Template for A Reproducible Computational Paper
+# Template for a Reproducible Computational Paper
 
 This repository contains the boilerplate elements for a computational paper built from Python notebook(s).
 
