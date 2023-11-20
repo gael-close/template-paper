@@ -75,7 +75,7 @@ In long paper, dedicated section to review the state of the art.
 Or "Design" if more appropriate.
 Use action verb to emphasize the procedure (the "recipe").
 
-![Block diagram.](https://source.unsplash.com/person-writing-on-white-paper-3QzMBrvCeyQ){#fig-bd width=400 fig-align=left}
+![Block diagram.](https://source.unsplash.com/person-writing-on-white-paper-3QzMBrvCeyQ){#fig-bd}
 
 @fig-bd shows the architecture block diagram.
 
