@@ -90,7 +90,7 @@ run poster
 ## References
 
 Here are two articles generated from Quarto.
-The template here was derived from the setup used by the following 2 papers (also formatted by Quarto):
+The template here was derived from these.
 
 * G. Close, “Technical Writing and Publishing Data-Rich Articles with Quarto,” Sep. 22, 2022. [Online]. Available: https://gael-close.github.io/2209-tech-writing.html
 
