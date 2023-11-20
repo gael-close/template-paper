@@ -1,28 +1,28 @@
 # A Template for A Reproducible Computational Paper
 
-This repository contains the boilerplate elements for a computational paper, authored from Python notebooks
+This repository contains the boilerplate elements for a computational paper built from Python notebook(s).
+
 Such paper consists of
 
-* code and data
+* code and data 
 * manuscript in the form of a computational Python notebook mixing code, computation results and narrative with a simple Markdown syntax
 * possibly other support notebooks as supplementary materials
 * a companion A0 poster
-* Runfile to build the paper from scratch with simple commands (e.g. `run pdf` to build the journal-fromatted PDF)
+* Runfile to build the paper from scratch with simple commands (e.g. `run pdf` to build the journal-fromatted PDF, or `run poster`)
 * Configuration options 
 
 ![](assets/template-paper-overview.png)
 
 
-    
-## Published paper
+## Formatted paper and poster
 
-* Preprint: TechRxiv
+The deliverables consist of the paper and poster in PDF and HTML format. 
+They are published automatically at [this Gihub page](https://gael-close.github.io/template-paper/index.html) for convenience. 
+This is achived by a GitHub action which uploads the [deliverables](deliverables) folder.
 
-* Final paper: IEEE journal ...
+* Paper: [PDF](https://gael-close.github.io/template-paper/paper.pdf) | [HTML](https://gael-close.github.io/template-paper/paper.html)
+* Poster: [PDF](https://gael-close.github.io/template-paper/poster.pdf) | [HTML](https://gael-close.github.io/template-paper/poster.html)
 
-* As a convenience, the paper in HTML format and all supplementary materials are available
-on [this Gitlab page](https://se-bvx.pages.melexis.com/papers/template-paper/index.html)
-(VPN needed)
 
 ## Features 
 
@@ -44,6 +44,28 @@ on [this Gitlab page](https://se-bvx.pages.melexis.com/papers/template-paper/ind
 * [tbump](https://github.com/your-tools/tbump) configuration for managing version tag.
 * Plain 1-column PDF format also available for supplementary notes
 
+
+## Quick start
+
+Install (in a virtual env)
+
+```
+pip install Runfile
+run install
+```
+
+To build the paper HTML and the poster:
+
+```
+run html
+run poster
+```
+
+Dependencies:
+
+* [Quarto](https://quarto.org/docs/download/)
+* [a Latex installation](https://quarto.org/docs/output-formats/pdf-engine.html)
+* The poster PDF rendering relies on google-chrome
 
 ## References
 
