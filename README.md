@@ -32,7 +32,7 @@ This is achived by a GitHub action which uploads the [deliverables](deliverables
 * Paper manuscript in Quarto markdown. Ability to mix code, illustrations and narrative story
   in a lean syntax. 
   Support all elements of a formal paper.
-  See ["Technical Writing and Publishing Data-Rich Articles with Quarto"](https://gael-close.github.io/2209-tech-writing.html).
+  See ["Technical Writing and Publishing Data-Rich Articles with Quarto"](https://gael-close.github.io/posts/2209-tech-writing/2209-tech-writing.html)
 
 * [Runfile](https://pypi.org/project/runfile/) automating all frequency commands (build, release, ...).
 * Commands to generate IEEE-formatted PDF, and HTML version for quick preview
@@ -92,7 +92,7 @@ run poster
 Here are two articles generated from Quarto.
 The template here was derived from these.
 
-* G. Close, “Technical Writing and Publishing Data-Rich Articles with Quarto,” Sep. 22, 2022. [Online]. Available: https://gael-close.github.io/2209-tech-writing.html
+* G. Close, “Technical Writing and Publishing Data-Rich Articles with Quarto,” Sep. 22, 2022. [Online]. Available: https://gael-close.github.io/posts/2209-tech-writing/2209-tech-writing.html.
 
 * B. Brajon, E. Gasparin, and G. Close, “A benchmark of integrated magnetometers and magnetic gradiometers,” IEEE Access, vol. 11, pp. 115635–115643, 2023, <https://doi.org/10.1109/ACCESS.2023.3325035>.
 
