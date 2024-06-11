@@ -90,7 +90,7 @@ requires:
   - poster
 ```
 
-## clean_latex
+## clean:latex
 
 Clean latex support files.
 
@@ -106,7 +106,7 @@ Clean the jupyter cache. One could also add `--cache-refresh` argument.
 
 ```yaml
 requires:
-  - clean_latex
+  - clean:latex
 ```
 
 ```bash
@@ -149,7 +149,7 @@ tbump --no-push $version+$(git rev-parse --short=4 HEAD)
 Inspect the changes in the main [deliverables](deliverables). 
 
 ```bash
-git difftool --tool=diffpdf HEAD~1 deliverables/short-title.pdf
+git difftool --tool=diffpdf HEAD~1 deliverables/paper.pdf
 ```
 ## pub
 
@@ -159,5 +159,14 @@ You still need to add the release notes [there](https://gitlab.melexis.com/se-bv
 
 ```bash
 rclone copyto deliverables/paper.pdf "RD72:/deliverables/Template Paper.pdf"
+git push --follow-tags
+```
+
+## pub:working
+
+Shortcut the release process and push the working copy.
+
+```bash
+rclone copyto docs/paper.pdf "RD72:/deliverables/Template Paper.pdf"
 git push --follow-tags
 ```

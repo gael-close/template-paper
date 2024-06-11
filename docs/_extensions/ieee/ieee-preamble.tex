@@ -73,12 +73,17 @@
 
 % color links
 \usepackage{hyperref}
-\hypersetup{ colorlinks, citecolor=teal, linkcolor=teal, urlcolor=teal}
-
 \hypersetup{%
-  colorlinks=true,%
-  linkcolor=teal,
-  citecolor=teal,
-  urlcolor=teal,
+  % Preprint: colorlinks OK
+  % colorlinks=true, linkcallcolors=teal,
+  % Final: hide links
+  hidelinks=true,
   bookmarksnumbered=true,%
   bookmarksopen=true}
+
+% version stamp
+\usepackage{datetime}
+\usdate
+\usepackage{tikz}\usetikzlibrary{calc}
+\newcommand\version[1]{\tikz[overlay,remember picture]{\node at ($(current page.west)+(0.6,0)$)[rotate=90]
+{\textcolor{gray}{\small \texttt{v#1}. Compiled on \today\ at \currenttime.}};}}
