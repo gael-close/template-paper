@@ -23,6 +23,8 @@
 \usepackage{colortbl}
 \usepackage{multirow}
 \usepackage{stfloats} % https://tex.stackexchange.com/a/324358
+\usepackage{placeins}
+\usepackage{pbalance}
 
 % Fix table in 2-column format and enable wide table
 % https://tex.stackexchange.com/a/224096
@@ -86,4 +88,4 @@
 \usdate
 \usepackage{tikz}\usetikzlibrary{calc}
 \newcommand\version[1]{\tikz[overlay,remember picture]{\node at ($(current page.west)+(0.6,0)$)[rotate=90]
-{\textcolor{gray}{\small \texttt{v#1}. Compiled on \today\ at \currenttime.}};}}
+{\textcolor{gray!40}{\small \texttt{v#1}. Compiled on \today\ at \currenttime.}};}}
