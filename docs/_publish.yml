@@ -1,0 +1,4 @@
+- source: paper.qmd
+  confluence:
+    - id: '333217943'
+      url: 'https://melexis.atlassian.net/wiki/spaces/IBA/pages/333217943'

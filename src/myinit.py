@@ -4,27 +4,21 @@ import os
 import numpy as np
 import pandas as pd
 from box import Box
+from pathlib import Path
+from contextlib import contextmanager
+from icecream import install
+from subprocess import PIPE, Popen
+install()
+try:
+    pd.options.mode.copy_on_write = True
+except:
+    pass
 
-# Unit 1
+# Units
 import forallpeople as si
 from si_prefix import si_format
-
+import sigfig
 si.environment("default", top_level=False)
-
-# Unit 2: see https://pint.readthedocs.io/en/0.10.1/tutorial.html#using-pint-in-your-projects
-from pint import UnitRegistry, set_application_registry
-import pint_pandas
-
-ureg = UnitRegistry()
-ureg.default_format = "~"
-set_application_registry(ureg)
-pint_pandas.PintType.ureg = ureg
-
-# Significant digits
-import functools
-from sigfig import round as round_sf
-round_sf = functools.partial(round_sf, sigfigs = 3)
-round_sf_=np.frompyfunc(round_sf, 1,1)
 
 
 # Plots
@@ -35,7 +29,7 @@ import hvplot.pandas
 import holoviews as hv  # Load w/ hv.extensions('bokeh') in notebook
 
 # Display
-from IPython.display import IFrame, HTML, Image, Markdown
+from IPython.display import IFrame, HTML, Image, Markdown, display
 
 
 # Magic (use plain python syntax)
@@ -73,14 +67,26 @@ mpl.rcParams.update(
 sns.set_palette("tab10")
 my_table_class = 'class="table table-striped table-bordered table-sm"'
 
+
 MLX_COLORS= pd.Series({
     'blue':  '#00354C',
-    'blue2': '#006996',  # kcolor, same color with different saturation | better for fill
-    'red'  : '#d43e45',
-    'green': '#6ebca8',
-    'green2':'#4da890',   # same as above for -10 in lightness HSL for readibility
-    'orange': '#e8a428',
-    'grey':   '#b4c4cb'})
+    'red'  : '#db4140',
+    'green': '#65bba9',
+    'orange': '#eea320',
+    'grey':   '#b2c4cb',
+    'brown3': '#ccb28f',
+    'red2': '#cc7a7a',
+    'black':  '#3e4242',
+    'blue2': '#2d6c7f',
+    'blue3': '#599db2',
+    'blue4': '#8fc1cc',
+    'green2':'#8fccbc',
+    'green3':'#59b29d',
+    'green4': '#53a5a1',
+    'green5': '#597f7c',
+    'green6': '#c0cc8f',
+    'brown2': '#d8cfc3',
+    'red3':'#a35471'})
 
 
 # Test plot
@@ -91,7 +97,7 @@ def my_sineplot():
     for i in range(1, 7):
         plt.plot(x, np.sin(x + i * 0.5) * (7 - i))
     plt.xlabel(r"Angle $\theta$ [rad]")  # raw string to rende latex
-    plt.ylabel(r"Voltage $V_{ADC}$ [V]")
+    plt.ylabel(r"Voltage $V_\mathrm{ADC}$ [V]")
     plt.title("Test Plot")
     return fig, ax
 
@@ -192,15 +198,37 @@ def print_git_version():
     version = repo.git.describe("--tags", "--always", "--dirty")
     return Markdown(f"Git version\n: `{version}`.")
 
-def fmt_sigfigs(s, sigfigs=2, unit=False):
-    """Round a series of numbers or physical quantity to significant digits"""
-    if isinstance(s.iloc[0], si.Physical):
-        df = s.astype(str).str.split(expand=True)
-        df[0] = df[0].map(lambda x: round_sf(x, sigfigs=sigfigs, notation="std"))
-        return df[0] + " " + df[1]
+
+def sf(x, n=3):
+    """
+    Return a string representation of x with n significant numbers
+    """
+    if isinstance(x, si.Physical):
+        m, u = str(x).split()
+        return sigfig.round(m, n) + " " + u
     else:
-        return s.map(
-            lambda x: round_sf(x, sigfigs=sigfigs, notation="std") + (f" {unit}"
-            if unit
-            else "")
-        )
+        return str(sigfig.round(x, n))
+
+
+def sf_(x, n=3):
+    """
+    Same as sf_ but for a numpy array
+    """
+    return np.frompyfunc(sf, 2, 1)(x, n)
+
+
+
+# https://stackoverflow.com/a/75049113
+@contextmanager
+def set_directory(path):
+    _oldCWD = os.getcwd()
+    os.chdir(os.path.abspath(path))
+
+    try:
+        yield
+    finally:
+        os.chdir(_oldCWD)
+
+def cmdline(command):
+    process = Popen(args=command, stdout=PIPE, shell=True)
+    return process.communicate()[0]

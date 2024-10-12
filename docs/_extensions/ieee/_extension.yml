@@ -12,7 +12,7 @@ contributes:
       link-citations: false # not used in final IEEE paper as per IEEE policy
       format-resources:
         # Add here the resources required for the PDF rendering
-        # except the logos (to be handled in Python for plain preprint)
+    
         - custom.scss
         - IEEEtran.cls
         - ieeeaccess.cls
