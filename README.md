@@ -72,7 +72,7 @@ Install the Python dependencies in a Virtual environment (one-time only)
 ```bash
 
 ENV_NAME=$(basename "`pwd`")
-conda create -n $ENV_NAME python=3.11
+conda create -n $ENV_NAME python=3.12
 conda activate $ENV_NAME
 echo "conda activate $ENV_NAME" > .in
 echo "export QUARTO_PYTHON=$(which python)" >> .in
