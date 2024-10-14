@@ -1,0 +1,14 @@
+{
+    "spellright.language": [],
+    "spellright.documentTypes": [
+        "latex",
+        "plaintext"
+    ],
+    "spellright.parserByClass": {
+        "quarto": {
+            "parser": "markdown"
+        }
+    },
+
+    "python.defaultInterpreterPath": "/home/gcl/anaconda3/envs/template-paper/bin/python"   
+}

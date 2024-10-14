@@ -11,7 +11,7 @@
 !.gitattributes
 !.envrc
 !.gitlab-ci.yml
-
+!.vscode
 
 # Python
 __pycache__/

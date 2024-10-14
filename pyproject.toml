@@ -33,3 +33,7 @@ jupyterlab = "^4.2.5"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.jupytext]
+formats = "ipynb,py:percent"
+notebook_metadata_filter="-all"
