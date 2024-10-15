@@ -1,0 +1,2 @@
+formats = "ipynb,py:percent"
+notebook_metadata_filter="-all"
