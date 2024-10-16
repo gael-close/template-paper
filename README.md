@@ -64,12 +64,7 @@ Install the Python dependencies in a Virtual environment (one-time only)
 
 
 ```bash
-uv venv --python=3.12
-source .venv/bin/activate
 uv sync
-echo "source .venv/bin/python" > .in
-echo "export QUARTO_PYTHON=$(which python)" >> .in
-
 ```
 
 ### Activation (to be done in each session)
