@@ -10,5 +10,5 @@
         }
     },
 
-    "python.defaultInterpreterPath": "/home/gcl/anaconda3/envs/template-paper/bin/python"   
+    "python.defaultInterpreterPath": ".venv/bin/python"   
 }

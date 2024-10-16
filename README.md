@@ -53,42 +53,37 @@ These instructions are valid for Linux OS.
 
 Install the pre-requisites 
 
-* [Conda](https://www.anaconda.com/download/success) or another python equivalent installation
+* [Conda](https://www.anaconda.com/download/success) or another python installation
 * [Quarto](https://quarto.org/docs/download/)
 * [a Latex installation](https://quarto.org/docs/output-formats/pdf-engine.html)
 * google-chrome. The poster PDF rendering relies on printing to PDF via google-chrome.
-* [Poetry](https://python-poetry.org/docs/#installation)
+* [UV](https://docs.astral.sh/uv/getting-started/installation/n)
 
-  ```bash
-  pipx ensurepath
-  pipx install poetry
-  poetry config virtualenvs.path ~/anaconda3/envs
-  poetry config virtualenvs.create false
-  ```
-
+  
 Install the Python dependencies in a Virtual environment (one-time only)
 
 
 ```bash
-
-ENV_NAME=$(basename "`pwd`")
-conda create -n $ENV_NAME python=3.12
-conda activate $ENV_NAME
-echo "conda activate $ENV_NAME" > .in
+uv venv --python=3.12
+source .venv/bin/activate
+uv sync
+echo "source .venv/bin/python" > .in
 echo "export QUARTO_PYTHON=$(which python)" >> .in
-poetry install --no-root
+
 ```
 
 ### Activation (to be done in each session)
 
-Load the virtual environment either manually `source .in` or
-via the [autovenv plugin](https://github.com/zpm-zsh/autoenv) or equivalent.
+Activate the virtual environment either manually:
+
 
 ```bash
-source .in
+source .venv/bin/activate
+export QUARTO_PYTHON=$(which python)
 ```
 
-Double check the configuration with `quarto check`
+Or automatically by copying the above command in the file `.in` 
+and the [autovenv plugin](https://github.com/zpm-zsh/autoenv) or equivalent.
 
 
 ### Operation
