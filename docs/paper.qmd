@@ -9,16 +9,22 @@ keywords: Magnetic sensors, Hall effect
 ```{python}
 #| output: false
 #| echo: false
-import sys 
-from pyprojroot import here
-sys.path.insert(0, str(here()))
-sys.path.insert(0,'..')
-from src.myinit import *
+
 # Autoreload
 %reload_ext autoreload
 %autoreload 2
 
-from src.mymodule import load_data, plot_joint
+# Generic init code
+from template_paper.myinit import *
+from template_paper.mymodule import *
+
+# Optional checks SKIPPED
+# print(sys.executable)
+# my_sineplot()
+
+# Optional watermark SKIPPED
+# %load_ext watermark
+# %watermark -n -t -u -v -g -iv
 ```
 
 ```{python}

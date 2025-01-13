@@ -7,15 +7,11 @@
 # %autoreload 2
 
 # Generic init code
-import sys
-from pyprojroot import here 
-sys.path.append(str(here()))
-from src.myinit import *
+from template_paper.myinit import *
+from template_paper.mymodule import *
 
-from src.mymodule import *
+# Optional checks
 print(sys.executable)
-
-# %%
 my_sineplot();
 
 # %% [markdown]
@@ -30,5 +26,3 @@ df.head()
 
 # %%
 plot_joint(df);
-
-# %%

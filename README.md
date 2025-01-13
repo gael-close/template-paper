@@ -60,11 +60,13 @@ Install the pre-requisites
 * [UV](https://docs.astral.sh/uv/getting-started/installation/n)
 
   
-Install the Python dependencies in a Virtual environment (one-time only)
+Install the Python dependencies in a Virtual environment (one-time only). 
+Install also the current package under development in editable mode for convenience using [sitepath](https://pypi.org/project/sitepath/)
 
 
 ```bash
 uv sync
+python -m sitepath .
 ```
 
 ### Activation (to be done in each session)

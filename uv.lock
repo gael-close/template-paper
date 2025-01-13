@@ -1806,6 +1806,14 @@ wheels = [
 ]
 
 [[package]]
+name = "sitepath"
+version = "0.4.0"
+source = { registry = "https://pypi.org/simple" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d7/eb/221e3e400e6b00c7a19884a4361d45138e93b78f6705da74972d9b4bee0e/sitepath-0.4.0-py3-none-any.whl", hash = "sha256:7c3ae0e474ab1a13bc83bf6fda9b24aead091db00341d998c9992c16cfa0080d", size = 17705 },
+]
+
+[[package]]
 name = "six"
 version = "1.16.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1925,6 +1933,7 @@ dependencies = [
     { name = "seaborn" },
     { name = "si-prefix" },
     { name = "sigfig" },
+    { name = "sitepath" },
     { name = "watermark" },
 ]
 
@@ -1948,6 +1957,7 @@ requires-dist = [
     { name = "seaborn", specifier = ">=0.13.2" },
     { name = "si-prefix", specifier = ">=1.3.3" },
     { name = "sigfig", specifier = ">=1.3.3" },
+    { name = "sitepath", specifier = ">=0.4.0" },
     { name = "watermark", specifier = ">=2.5.0" },
 ]
 

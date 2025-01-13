@@ -2,9 +2,8 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 from pyprojroot import here
-from src.myinit import my_sineplot
 import matplotlib.pyplot as plt
-
+from .myinit import my_sineplot
 
 # Data Preparation
 def load_data():

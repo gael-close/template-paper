@@ -2,7 +2,9 @@
 name = "template-paper"
 version = "0.1.0"
 description = ""
-authors = ["Gael Close <gcl@melexis.com>"]
+authors = [
+    {name = "Gael Close", email = "gcl@melexis.com"}
+    ]
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
@@ -24,10 +26,13 @@ dependencies = [
     "seaborn>=0.13.2",
     "si-prefix>=1.3.3",
     "sigfig>=1.3.3",
+    "sitepath>=0.4.0",
     "watermark>=2.5.0",
 ]
 
 
+[tool.setuptools]
+packages = ["template_paper"]
 
 [tool.jupytext]
 formats = "ipynb,py:percent"
