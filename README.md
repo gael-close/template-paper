@@ -82,6 +82,13 @@ export QUARTO_PYTHON=$(which python)
 Or automatically by copying the above command in the file `.in` 
 and the [autovenv plugin](https://github.com/zpm-zsh/autoenv) or equivalent.
 
+At all times, you might verify that the environment is set up properly by consulting the following variables:
+
+```bash
+echo $VIRTUAL_ENV
+echo $QUARTO_PYTHON
+```
+
 
 ### Operation
 

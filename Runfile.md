@@ -8,7 +8,7 @@ Examples:
 **Typical workflow**
 
     # dev
-    cd $B3/papers/template-paper
+    cd $B3/papers/template-paper; source .in
     run_set version X.Y.X-alpha; run bump
     run code
     run html; run pdf;            
@@ -54,10 +54,27 @@ cd notebooks;
 jupyter notebook
 ```
 
+## venv
+
+```python
+import os, sys
+assert ("venv" in sys.executable 
+  and "venv" in os.environ["QUARTO_PYTHON"]),\
+  "Load the venv via: source .in"
+
+print("✅ Python and Quarto venv verified")  
+```
+
+
 ## html
 
 Builds the [HTML paper](docs/_build/paper.html),
 ready for publication
+
+```yaml
+requires:
+  - venv
+```
 
 ```bash
 quarto render docs/paper.qmd --to mydefault-html
@@ -66,6 +83,11 @@ quarto render docs/paper.qmd --to mydefault-html
 ## pdf
 
 Builds the [PDF paper](docs/_build/paper.pdf), typically in IEEE format.
+
+```yaml
+requires:
+  - venv
+```
 
 ```bash
 quarto render docs/paper.qmd --to ieee-pdf
