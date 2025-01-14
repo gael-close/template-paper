@@ -1,13 +1,14 @@
 import pandas as pd
 import numpy as np
 import seaborn as sns
-from pyprojroot import here
+from importlib import resources
+DATA = resources.files(__package__).parent / "data"
 import matplotlib.pyplot as plt
 from .myinit import my_sineplot
 
 # Data Preparation
 def load_data():
-    df = pd.read_csv(here("data/" + "auto-mpg.csv"))
+    df = pd.read_csv(DATA /  "auto-mpg.csv")
     return df
 
 
