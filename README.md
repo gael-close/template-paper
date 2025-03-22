@@ -11,7 +11,7 @@ Such paper consists of
 * Runfile to build the paper from scratch with simple commands (e.g. `run pdf` to build the journal-fromatted PDF, or `run poster`)
 * Configuration options 
 
-![](assets/template-paper-overview.png)
+![](docs/figs/template-paper-overview.png)
 
 
 ## Formatted paper and poster

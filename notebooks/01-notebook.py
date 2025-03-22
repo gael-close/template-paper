@@ -8,7 +8,8 @@
 
 # Generic init code
 from template_paper.myinit import *
-from template_paper.mymodule import *
+from template_paper.dataset import *
+from template_paper.plots import *
 
 # Optional checks
 print(sys.executable)

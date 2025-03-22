@@ -15,7 +15,7 @@ Examples:
     
     # pre-release check
     git describe --long --dirty        
-    run clean; run html; run pdf; run supp;
+    run clean; run html; run pdf; run supp; 
     
     # make release (but don't publish)
     run_set version X.Y.X; 
@@ -105,11 +105,30 @@ google-chrome --headless --disable-gpu --print-to-pdf=docs/_build/poster.pdf --n
 
 ## supp
 
-Build all supplementary materials: poster, notes, computational notebook, ... 
+Build the supplementary materials.
+It could be supplementary notes or standalone computational notebook, ... 
+Only build if the source has changed.
+
+```py
+from pathlib import Path
+import os
+import shutil
+for src in Path("notebooks").glob("*.ipynb"):
+  dst=src.parent/"_build"/(src.stem+".html")
+  if (not dst.exists() or (src.lstat().st_mtime>dst.lstat().st_mtime)):
+    os.system(f"quarto render {src} --self-contained --toc; mv {src.with_suffix('.html')} {dst}")
+
+```
+
+## all
+
+Build all deliverables: paper, poster, notes, computational notebook, ... 
 
 ```yaml
 requires:
-  - poster
+  - html
+  - pdf
+  - supp
 ```
 
 ## clean:latex
@@ -135,7 +154,7 @@ requires:
 cd docs
 rm -fr .jupyter_cache
 rm -fr _build
-rm -fr paper_files poster_files
+rm -fr *_files
 ```
 
 ## bump

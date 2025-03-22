@@ -22,8 +22,9 @@ tag_template = "v{new_version}"
 
 [[before_commit]]
 name = "Build"
-cmd = '''run clean; run html; run pdf; run supp;
-         cp -rT docs/_build deliverables; # copy _build dir to deliverables overwritting the destination
+cmd = '''run clean; run all;
+         cp -rT docs/_build deliverables;         # copy main deliverable overwritting the destination
+         cp notebooks/_build/*.html deliverables; # copy supporting deliverables
          tree ./deliverables -H '.' -T "Template Paper" > deliverables/index.html
          '''
 
