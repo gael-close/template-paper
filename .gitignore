@@ -12,6 +12,8 @@
 !.envrc
 !.gitlab-ci.yml
 !.vscode
+!.in
+!.out
 
 # Python
 __pycache__/
