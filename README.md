@@ -66,7 +66,7 @@ Install also the current package under development in editable mode for convenie
 
 ```bash
 uv sync
-python -m sitepath .
+python -m sitepath develop template_paper
 ```
 
 ### Activation (to be done in each session)
