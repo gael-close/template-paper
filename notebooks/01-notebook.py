@@ -1,5 +1,7 @@
 # %% [markdown]
 # # Standalone notebook
+#
+# Example: Exploratory data analysis 
 
 # %% init_cell=true
 # Autoreload
@@ -15,15 +17,31 @@ from template_paper.plots import *
 print(sys.executable)
 my_sineplot();
 
+# Specific libraries for summarizing dataframe
+from summarytools import dfSummary
+import buckaroo
+
+
 # %% [markdown]
-# ## Data preparation
+# ## Dataset overview
 
 # %%
 df=load_data()   
 df.head()
 
+# %%
+dfSummary(df)
+
 # %% [markdown]
-# ## Analysis and plots
+# ## Exploratory Data Analysis
+#
+# You might use https://github.com/Kanaries/pygwalker to quickly visualize your data.
+#
+
+# %% [markdown]
+# ### Plots
 
 # %%
 plot_joint(df);
+
+# %%

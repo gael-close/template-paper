@@ -12,8 +12,6 @@ author:
     affiliation:
       - ref: 1
     corresponding: true
-date: last-modified
-date-format: '[Revised] DD-MMM-YYYY HH:MM'
 affiliations:
   - id: 1
     name: Melexis Technologies SA
@@ -39,3 +37,4 @@ execute:
   #enabled: true # must be in to evaluate inline calculation
 ieeeaccess: true
 ieeebio: false
+notebook-links: false

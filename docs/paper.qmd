@@ -1,9 +1,11 @@
 ---
-version: 1.1.0+f773
+version: v1.2.0+d3c6
 title: Paper Title
 abstract: |
   Key points of intro (context and gap). Key method. Key results. Key impact.
 keywords: Magnetic sensors, Hall effect
+date: last-modified
+date-format: Revised DD-MMM-YYYY HH:MM | v1.2.0+d3c6
 ---
 
 ```{python}
@@ -35,9 +37,6 @@ df=load_data()
 ```
 
 ::: {.content-visible when-format="html"}
-<!-- footnote in PDF -->
-
-Version: v{{< meta version >}}
 
 ::: {.callout-note collapse="true"}
 
@@ -119,15 +118,10 @@ Pictures of realizations and/or experimental setups.
 - Test 1
 - Test 2
 
+You can either run the code directly here, 
+or embed from supplementary notebooks like this:
 
-```{python}
-#| echo: false
-#| label: fig-result1
-#| fig-align: left
-#| fig-cap: "Result of \
-#|  test 1."
-plot_joint(df);
-```
+{{< embed ../notebooks/01-notebook.ipynb#joint-plot >}}
 
 ## Discussion
 - Key insights

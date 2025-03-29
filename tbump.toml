@@ -1,7 +1,7 @@
 # Uncomment this if your project is hosted on GitHub:
 # github_url = "https://github.com/<user or organization>/<project>/"
 [version]
-current = "1.1.0+f773"
+current = "1.2.0+d3c6"
 
 # Example of a semver regexp.
 # Make sure this matches current_version before
@@ -31,6 +31,7 @@ cmd = '''run clean; run all;
 # For each file to patch, add a [[file]] config
 # section containing the path of the file, relative to the
 # tbump.toml location.
+# Replace version in YAML front matter
 [[file]]
 src =   'docs/paper.qmd'
-search ='version: {current_version}'  
+search ='^[\w-]*: .*{current_version}' 

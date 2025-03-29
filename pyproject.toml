@@ -8,6 +8,7 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "buckaroo>=0.9.11",
     "forallpeople>=2.7.0",
     "gitpython>=3.1.43",
     "holoviews>=1.19.1",
@@ -27,6 +28,8 @@ dependencies = [
     "si-prefix>=1.3.3",
     "sigfig>=1.3.3",
     "sitepath>=0.4.0",
+    "summarytools>=0.3.0",
+    "tbump>=6.11.0",
     "watermark>=2.5.0",
 ]
 

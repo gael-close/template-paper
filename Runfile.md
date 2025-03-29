@@ -54,6 +54,12 @@ cd notebooks;
 jupyter notebook
 ```
 
+## notebooks:sync
+
+```bash
+jupytext --sync notebooks/*.py
+```
+
 ## venv
 
 ```python
@@ -109,7 +115,7 @@ Build the supplementary materials.
 It could be supplementary notes or standalone computational notebook, ... 
 Only build if the source has changed.
 
-```py
+```python
 from pathlib import Path
 import os
 import shutil

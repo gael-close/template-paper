@@ -32,7 +32,7 @@ contributes:
         - custom.scss
       toc: true
       toc-location: right
-      title-block-banner: false
+      title-block-banner: true
       code-fold: true
       csl: ieee-with-url.csl
       cite-method: citeproc
