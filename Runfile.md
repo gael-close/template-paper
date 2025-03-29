@@ -84,6 +84,7 @@ requires:
 
 ```bash
 quarto render docs/paper.qmd --to mydefault-html
+rm -fr docs/_build/figs #not needed as HTML is standalone
 ```
 
 ## pdf
