@@ -25,6 +25,7 @@ __pycache__/
 # Ignore generated directories and other repo build, CVS, gdrive ..
 _plots/
 *_files/
-**/_build/*
-# keep the empty directory
-!notebooks/_build/.gitkeep 
+**/_build/
+**/tmp/*
+# keep the empty tmp directory
+!notebooks/tmp/.gitkeep 

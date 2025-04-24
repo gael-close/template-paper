@@ -121,7 +121,7 @@ from pathlib import Path
 import os
 import shutil
 for src in Path("notebooks").glob("*.ipynb"):
-  dst=src.parent/"_build"/(src.stem+".html")
+  dst=src.parent/"tmp"/(src.stem+".html")
   if (not dst.exists() or (src.lstat().st_mtime>dst.lstat().st_mtime)):
     os.system(f"quarto render {src} --self-contained --toc; mv {src.with_suffix('.html')} {dst}")
 

@@ -24,7 +24,7 @@ tag_template = "v{new_version}"
 name = "Build"
 cmd = '''run clean; run all;
          cp -rT docs/_build deliverables;         # copy main deliverable overwritting the destination
-         cp notebooks/_build/*.html deliverables; # copy supporting deliverables
+         cp notebooks/tmp/*.html deliverables;    # copy supporting deliverables
          tree ./deliverables -H '.' -T "Template Paper" > deliverables/index.html
          '''
 
