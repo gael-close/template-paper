@@ -5,8 +5,8 @@
 
 # %% init_cell=true
 # Autoreload
-# %reload_ext autoreload
-# %autoreload 2
+# # %reload_ext autoreload
+# # %autoreload 2
 
 # Generic init code
 from template_paper.myinit import *
@@ -44,4 +44,7 @@ dfSummary(df)
 # %%
 plot_joint(df);
 
-# %%
+# %% [markdown]
+# ## Scratch pad
+# %run -i tests/dev.py
+

@@ -9,6 +9,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "buckaroo>=0.9.11",
+    "fire>=0.7.0",
     "forallpeople>=2.7.0",
     "gitpython>=3.1.43",
     "holoviews>=1.19.1",
@@ -30,9 +31,13 @@ dependencies = [
     "sitepath>=0.4.0",
     "summarytools>=0.3.0",
     "tbump>=6.11.0",
+    "typer>=0.16.1",
     "watermark>=2.5.0",
 ]
 
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
 packages = ["template_paper"]
@@ -40,3 +45,6 @@ packages = ["template_paper"]
 [tool.jupytext]
 formats = "ipynb,py:percent"
 notebook_metadata_filter="-all"
+
+[project.scripts]
+hello = "template_paper.scripts:app"

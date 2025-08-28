@@ -121,7 +121,7 @@ Pictures of realizations and/or experimental setups.
 You can either run the code directly here, 
 or embed from supplementary notebooks like this:
 
-{{< embed ../notebooks/01-notebook.ipynb#joint-plot >}}
+{{< embed ../notebooks/01-notebook.ipynb#fig-joint-plot >}}
 
 ## Discussion
 - Key insights

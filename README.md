@@ -60,13 +60,10 @@ Install the pre-requisites
 * [UV](https://docs.astral.sh/uv/getting-started/installation/n)
 
   
-Install the Python dependencies in a Virtual environment (one-time only). 
-Install also the current package under development in editable mode for convenience using [sitepath](https://pypi.org/project/sitepath/)
-
+Install the current package (in editale mode) and all its Python dependencies in a Virtual environment (one-time only) with just one command: 
 
 ```bash
 uv sync
-python -m sitepath develop template_paper
 ```
 
 ### Activation (to be done in each session)
@@ -113,3 +110,13 @@ The template here was derived from these.
 * B. Brajon, E. Gasparin, and G. Close, “A benchmark of integrated magnetometers and magnetic gradiometers,” IEEE Access, vol. 11, pp. 115635–115643, 2023, <https://doi.org/10.1109/ACCESS.2023.3325035>.
 
 The poster stylesheet is taken from https://github.com/hits-mbm-dev/paper-talin-loop/.
+
+## Obsolete notes
+In the previsou version, the package under development had to be installed manually with
+[sitepath](https://pypi.org/project/sitepath/)
+
+```bash
+python -m sitepath develop template_paper
+```
+
+However, this is now handled by `uv` (thanks to the build option in `pyproject.toml`).
