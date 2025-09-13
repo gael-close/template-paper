@@ -1,0 +1,10 @@
+{
+
+  "directory":  "new-paper",
+  "mypackage":  "mypackage",
+  "paper":      "Quarto Tech Paper.pdf",
+  "_copy_without_render": [
+    "docs/*"
+  ]
+}
+

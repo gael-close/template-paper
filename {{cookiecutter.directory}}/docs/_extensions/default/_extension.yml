@@ -1,0 +1,22 @@
+title: My default
+author: Gael Close
+version: 0.1.0
+contributes:
+  formats:
+    html:
+      # define default configuration for the html version of your format
+      theme:
+        - yeti
+        - custom.scss
+      toc: true
+      toc-location: right
+      title-block-banner: true
+      code-fold: true
+      csl: ieee-with-url.csl
+      cite-method: citeproc
+      link-citations: true
+      number-sections: false
+      shift-heading-level-by: -1
+      self-contained: true
+        
+    

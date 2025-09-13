@@ -1,0 +1,64 @@
+\documentclass[letterpaper, 10 pt, conference, twoside]{IEEEtran}
+\IEEEoverridecommandlockouts
+\IEEEpubid{\begin{minipage}{\textwidth}\ \\[12pt]
+    Draft for IEEE tran
+  \end{minipage}}
+
+% Patch packages
+\RequirePackage{scrlfile}
+\PreventPackageFromLoading{sidenotes}
+\PreventPackageFromLoading{marginnotes}
+
+% Pandoc settings
+\input{pandoc.tex}  
+
+% GCL settings
+\input{ieee-preamble.tex}  
+
+% ==========================================================================
+% IEEE tran front matter
+% ==========================================================================
+% from template
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\begin{document}
+
+% ==========================================================================
+% Title, authors, abstract, keywords
+% ==========================================================================
+\title{Minimum Working Example}
+\author{
+	\IEEEauthorblockN{
+		First Author$^1$\orcidlink{0000-0000-0000-0000},
+		Second Author$^2$\orcidlink{0000-0000-0000-0000} and
+		Third Author$^{3,*}\orcidlink{0000-0000-0000-0000}$}
+	
+	\IEEEauthorblockA{
+		$^1$Affiliation name, City, Country \\
+		$^2$Affiliation name, City, Country \\
+		$^3$Affiliation name, City, Country}
+	
+	\IEEEauthorblockN{$^*$Corresponding author: abc@gmail.com}
+	
+	\thanks{This research received no external funding.}			
+}
+\maketitle
+
+\begin{abstract}
+\lipsum[1]
+\end{abstract}
+
+\begin{IEEEkeywords}
+Latex, Template, Paper
+\end{IEEEkeywords}
+
+% ==========================================================================
+% Body
+% ==========================================================================
+\input{sample-body.tex}
+
+% ==========================================================================
+% Back matter
+% ==========================================================================
+\end{document}

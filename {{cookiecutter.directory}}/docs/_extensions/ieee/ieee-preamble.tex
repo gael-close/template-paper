@@ -1,0 +1,63 @@
+% Common packages
+\usepackage[T1]{fontenc}
+\usepackage{lipsum}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{physics}
+\usepackage{siunitx}
+\usepackage{graphicx}
+\usepackage[hyphens]{url}
+\usepackage{threeparttable}
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{makecell}
+\usepackage{upgreek}
+\usepackage{orcidlink}
+\usepackage{textalpha}          %enable alpha beta unicode in text
+\usepackage[switch]{lineno}
+% monofont
+\usepackage[scaled=0.8]{inconsolata}
+
+%styled tabled generated from pandas
+\usepackage{colortbl}
+\usepackage{multirow}
+\usepackage{stfloats} % https://tex.stackexchange.com/a/324358
+\usepackage{placeins}
+\usepackage{pbalance}
+
+
+% highlight
+\def\highlight{1}
+\ifdefined\highlight
+    \newcommand\hl[1]{%
+        \bgroup
+        \hskip0pt\color{red!80!black}%
+        #1%
+        \egroup
+    }
+
+% Muted text (for filler text)
+\newcommand\muted[1]{%
+\bgroup
+\hskip0pt\color{black!40!}%
+#1%
+\egroup
+}
+
+% color links
+\usepackage{hyperref}
+\hypersetup{%
+  % Preprint: colorlinks OK
+  % colorlinks=true, linkcallcolors=teal,
+  % Final: hide links
+  hidelinks=true,
+  bookmarksnumbered=true,%
+  bookmarksopen=true}
+
+% version stamp
+\usepackage{datetime}
+\usdate
+\usepackage{tikz}\usetikzlibrary{calc}
+\newcommand\version[1]{\tikz[overlay,remember picture]{\node at ($(current page.west)+(0.6,0)$)[rotate=90]
+{\textcolor{gray!40}{\small \texttt{v#1}. Compiled on \today\ at \currenttime.}};}}

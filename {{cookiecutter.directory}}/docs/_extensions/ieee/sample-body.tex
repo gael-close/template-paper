@@ -1,0 +1,39 @@
+% This is minimum body for a paper with one fig, one table, one ref
+\section{Introduction}
+\lipsum[1]
+
+\begin{mytable}
+\begin{longtable}[]{@{}llllll@{}}
+\caption{\label{tbl-parameters}Table of sensor
+parameters}\tabularnewline
+\toprule()
+Parameter & Symbol & Min & Typ & Max & Unit \\
+\midrule()
+\endfirsthead
+\toprule()
+Parameter & Symbol & Min & Typ & Max & Unit \\
+\midrule()
+\endhead
+Supply current & \(i_\mathrm{off}\) & - & - & 10 & mA \\
+Hall sensitivity & \(S_\mathrm{H}\) & 0.2 & - & - & V/T \\
+Effective nr. of bits & \(\mathrm{ENOB}\) & 12 & - & - & - \\
+\bottomrule()
+\end{longtable}
+\end{mytable}
+
+\lipsum[2]
+
+% figure* for 2-column figure
+\begin{figure}[htbp]
+\centerline{\includegraphics[width=2in]{example-image}}
+\caption{Example of a figure caption.}
+\label{fig}
+\end{figure}
+
+\begin{thebibliography}{00}
+\bibitem{1} T. Le Signor, N. Dupre, and G. F. Close, {``A
+gradiometric magnetic force sensor immune to stray magnetic fields for
+robotic hands and grippers,''} \emph{IEEE Robotics and Automation
+Letters}, vol. 7, no. 2, pp. 3070--3076, Apr. 2022, doi:
+\href{https://doi.org/10.1109/lra.2022.3146507}{10.1109/lra.2022.3146507}.
+\end{thebibliography}

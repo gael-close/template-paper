@@ -1,0 +1,20 @@
+citeproc: true
+csl: _extensions/ieee-with-url.csl
+title-block-style: default
+tbl-colwidths: false
+notebook-links: false
+date: last-modified
+date-format: "DD-MMM-YYYY@HH:mm"
+format:
+    academic-typst:
+      columns: 2
+      margin:
+        x: 1.5cm
+        y: 1.5cm
+      section-numbering: "1.1"
+      include-before-body:
+      - text: |
+          #import "@preview/unify:0.7.1": qty
+      
+    
+        

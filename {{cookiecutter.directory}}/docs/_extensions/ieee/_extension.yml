@@ -1,0 +1,20 @@
+title: IEEE Template
+author: Gael Close
+version: 0.1.0
+contributes:
+  formats:
+    pdf:
+      template: ieee-template.tex
+      fig-format: png
+      cite-method: citeproc
+      link-citations: false # not used in final IEEE paper as per IEEE policy
+      format-resources:
+        - IEEEtran.cls
+        - ieeeaccess.cls
+        - ieee-preamble.tex
+      shift-heading-level-by: -1
+      filters:
+        - custom.lua
+      
+        
+  

@@ -1,0 +1,67 @@
+\documentclass[letterpaper, 10 pt, conference, twoside]{IEEEtran}
+\IEEEoverridecommandlockouts
+\IEEEpubid{\begin{minipage}{\textwidth}\ \\[12pt]
+    $date$
+\end{minipage}}
+
+
+% Patch packages
+\RequirePackage{scrlfile}
+\PreventPackageFromLoading{sidenotes}
+\PreventPackageFromLoading{marginnotes}
+%% \PreventPackageFromLoading{tcolorbox}
+
+
+% Pandoc settings
+$pandoc.tex()$
+
+% GCL settings
+\input{ieee-preamble.tex} 
+% ==========================================================================
+% Front matter
+% ==========================================================================
+% from template
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+
+\begin{document}
+% ==========================================================================
+% Title, authors, abstract, keywords
+% ==========================================================================
+\title{$title$}
+\author{\IEEEauthorblockN{
+        $for(by-author)$
+        $by-author.name.literal$$for(by-author.affiliations)$\(^{$it.number$}\)$sep$,$endfor$$if(by-author.orcid)$\orcidlink{$by-author.orcid$}
+        $endif$$sep$, $endfor$}
+
+    $for(affiliations)$\IEEEauthorblockA{\(^$it.number$\)$affiliations.name$}$sep$ $endfor$
+
+    % Assumption: exactly 1 corresponding author
+    \IEEEauthorblockN{Email:
+        $for(by-author)$
+        $if(by-author.attributes.corresponding)$\(^*\)\emph{$by-author.email$}$endif$$endfor$}
+
+    $if(footnote)$\thanks{$footnote$}$endif$
+}
+\maketitle
+\begin{abstract}
+    $abstract$
+\end{abstract}
+\begin{IEEEkeywords}
+    $keywords$
+\end{IEEEkeywords}
+
+% ==========================================================================
+% Body
+% ==========================================================================
+
+$body$
+
+% ==========================================================================
+% Back matter
+% ==========================================================================
+$if(ieeebio)$
+\input{bio.tex}
+$endif$
+
+\end{document}
