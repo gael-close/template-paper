@@ -163,8 +163,8 @@ uv run app plot
 
 ## Advanced options
 
-A couple of optional config files are created in the project root folder.
-To enable them remove the `optional` prefix (such that they become proper `.gitignore` and `.gitattributes` files).
+A few optional git config files are available in the `optional/` folder.
+To enable them move them in the root folder.
 
 
 ## References
